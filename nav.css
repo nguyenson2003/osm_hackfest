@@ -1,0 +1,33 @@
+.navigation {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #393E46;
+    top:0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: #222831 3px solid;
+}
+
+.navigation ul {
+    width: fit-content;
+    margin: 0 0 0 0;
+    padding: 0;
+    text-align: left;
+}
+
+.navigation ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    color: #eeeeee;
+}
+.navigation a:hover {
+    background-color: gray;
+}

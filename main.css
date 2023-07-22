@@ -1,0 +1,19 @@
+*{
+    transition: 0.5s;
+}
+body {
+    font-family: Roboto ,Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #EEEEEE;
+    background-color: #222831;
+    position: relative;
+    margin: 0;
+}
+
+#map{
+    position: absolute;
+    color: black;
+}
+#map *{
+    transition: 0s;
+}
