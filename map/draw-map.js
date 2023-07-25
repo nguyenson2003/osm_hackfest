@@ -80,10 +80,6 @@ function onEachFeature(feature, layer) {
         click: zoomToFeature
     });
 }
-geojson = L.geoJson(vndata, {
-    style: style,
-    onEachFeature: onEachFeature
-}).addTo(map);
 
 //infomation of country
 var info = L.control();
@@ -116,3 +112,12 @@ legend.onAdd = function (map) {
     return div;
 };
 legend.addTo(map);
+
+geojson = L.geoJson(vndata, {
+    style: style,
+    onEachFeature: onEachFeature
+}).addTo(map);
+L.geoJson(island_data, {
+    style: style,
+    onEachFeature: onEachFeature
+}).addTo(map);

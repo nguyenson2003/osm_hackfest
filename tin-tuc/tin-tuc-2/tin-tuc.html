@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHÂN CHIA 8 VÙNG ẢNH HƯỞNG CỦA BÃO TRÊN LÃNH THỔ VIỆT NAM</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="../../general/nav.css">
+    <link rel="stylesheet" href="../../general/main-body.css">
+    <link rel="stylesheet" href="../../general/main.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li><a href="">Trang chủ</a></li>
+            <li><a href="">Tin tức</a></li>
+            <li><a href="">Thống kê</a></li>
+            <li><a href="">Bản đồ</a></li>
+            <li><a href="">Về chúng tôi</a></li>
+        </ul>
+    </div>
+    <div id="main-body">
+        <div id="content" class="body-section">
+            <h1>
+                PHÂN CHIA 8 VÙNG ẢNH HƯỞNG CỦA BÃO TRÊN LÃNH THỔ VIỆT NAM
+            </h1>
+            <p style="font-size: 15px;">
+                <b>Toàn lãnh thổ Việt Nam, vùng ven biển và đảo ven bờ được phân thành 8 vùng ảnh hưởng của bão với các đặc trưng cụ thể của các vùng như sau:</b><br>
+                <b>Vùng I: Đông Bắc</b> (bao gồm các tỉnh: Lào Cai, Yên Bái, Lạng Sơn, Thái Nguyên, Hà Giang, Cao Bằng, Tuyên
+                Quang, Bắc Kạn)<br>
+                Trong thời kỳ 1961 - 2014, có tổng số 70 cơn bão ảnh hưởng đến vùng Đông Bắc, trung bình từ 1,0 - 1,5
+                cơn/năm, ba tháng nhiều bão nhất là các tháng VII - VIII - IX. Lượng mưa một ngày lớn nhất đã xảy ra 546
+                mm. Tổng lượng mưa trung bình một đợt bão đã xảy ra 100 - 150 mm. Cấp gió bão mạnh nhất đã xảy ra cấp
+                10, giật cấp 12 - 13.<br>
+                <b>Vùng II: Tây Bắc</b> (bao gồm các tỉnh: Lai Châu, Điện Biên, Sơn La).<br>
+                Trong thời kỳ 1961 - 2014, có tổng số 26 cơn bão ảnh hưởng đến vùng Tây Bắc, trung bình dưới 0,5
+                cơn/năm, ba tháng nhiều bão nhất là các tháng VII - VIII - IX. Lượng mưa một ngày lớn nhất đã xảy ra 336
+                mm. Tổng lượng mưa trung bình một đợt bão đã xảy ra 50 - 100 mm. Cấp gió bão mạnh nhất đã xảy ra cấp 9,
+                giật cấp 12 - 13.<br>
+                <b>Vùng III: Quảng Ninh đến Thanh Hóa</b> (bao gồm các tỉnh thuộc đồng bằng, trung du Bắc Bộ và các tỉnh ven
+                biển từ Quảng Ninh đến Thanh Hóa).<br>
+                Trong thời kỳ 1961 - 2014, có tổng số 116 cơn bão ảnh hưởng đến vùng này, trung bình từ 2,0 - 2,5
+                cơn/năm, ba tháng nhiều bão nhất là các tháng VII - VIII - IX. Lượng mưa một ngày lớn nhất đã xảy ra 701
+                mm. Tổng lượng mưa trung bình một đợt bão đã xảy ra 150 - 200 mm. Cấp gió bão mạnh nhất đã xảy ra cấp
+                14, giật cấp 15-16. Riêng dải ven biển Quảng Ninh - Hải Phòng, cấp gió mạnh nhất đã xảy ra cấp 15, giật
+                cấp 17. Tổng lượng mưa quan trắc trung bình một đợt bão từ 150 - 200mm. Lượng mưa một ngày lớn nhất đã
+                xảy ra 502mm.<br>
+                <b>Vùng IV: Nghệ An đến Thừa Thiên Huế</b> (bao gồm các tỉnh: Nghệ An, Hà Tĩnh, Quảng Bình, Quảng Trị, Thừa
+                Thiên Huế)<br>
+                Trong thời kỳ 1961 - 2014, có tổng số 93 cơn bão ảnh hưởng đến vùng này, trung bình từ 1,5 - 2,0
+                cơn/năm, ba tháng nhiều bão nhất là các tháng VIII - IX - X. Lượng mưa một ngày lớn nhất đã xảy ra 978
+                mm. Tổng lượng mưa trung bình một đợt bão đã xảy ra 200 - 300 mm. Cấp gió bão mạnh nhất đã xảy ra cấp
+                14, giật cấp 15 - 16.<br>
+                <b>Vùng V: Đà Nẵng đến Bình Định</b> (bao gồm các tỉnh, thành phố: Đà Nẵng, Quảng Nam, Quảng Ngãi, Bình Định)
+                Trong thời kỳ 1961 - 2014, có tổng số 66 cơn bão ảnh hưởng đến vùng này, trung bình từ 1,0 - 1,5
+                cơn/năm, ba tháng nhiều bão nhất là các tháng IX - X - XI. Lượng mưa một ngày lớn nhất đã xảy ra 593 mm.
+                Tổng lượng mưa trung bình một đợt bão đã xảy ra 150 - 200 mm. Cấp gió bão mạnh nhất đã xảy ra cấp 13,
+                giật cấp 14 - 15.<br>
+                <b>Vùng VI: Phú Yên đến Ninh Thuận</b> (bao gồm các tỉnh: Phú Yên, Khánh Hòa, Ninh Thuận)
+                Trong thời kỳ 1961 - 2014, có tổng số 48 cơn bão ảnh hưởng đến vùng này, trung bình từ 0,5 - 1,0
+                cơn/năm, ba tháng nhiều bão nhất là các tháng X - XI - XII. Lượng mưa một ngày lớn nhất đã xảy ra 628
+                mm. Tổng lượng mưa trung bình một đợt bão đã xảy ra 150 - 200 mm. Cấp gió bão mạnh nhất đã xảy ra cấp
+                13, giật cấp 14 - 15.<br>
+                <b>Vùng VII: Tây Nguyên</b> (bao gồm các tỉnh: Kon Tum, Gia Lai, Đăk Lăk, Đăk Nông, Lâm Đồng).<br>
+                Trong thời kỳ 1961 - 2014, có tổng số 58 cơn bão ảnh hưởng đến vùng Tây Nguyên, trung bình từ 1,0 - 1,5
+                cơn/năm, ba tháng nhiều bão nhất là các tháng X - XI - XII. Lượng mưa một ngày lớn nhất đã xảy ra 443
+                mm. Tổng lượng mưa trung bình một đợt bão đã xảy ra 100 - 150 mm. Cấp gió bão mạnh nhất đã xảy ra cấp 9,
+                giật cấp 10-11.<br>
+                <b>Vùng VIII: Bình Thuận đến Cà Mau - Kiên Giang</b> (bao gồm các tỉnh Nam Bộ và các tỉnh ven biển từ Bình
+                Thuận đến Cà Mau - Kiên Giang).<br>
+                Trong thời kỳ 1961 - 2014, có tổng số 23 cơn bão ảnh hưởng đến vùng này, trung bình có dưới 0,5 cơn/năm,
+                ba tháng nhiều bão nhất là các tháng X - XI - XII. Lượng mưa một ngày lớn nhất đã xảy ra 273 mm. Tổng
+                lượng mưa trung bình một đợt bão đã xảy ra 50 - 100 mm. Cấp gió bão mạnh nhất đã xảy ra cấp 10, giật cấp
+                12 - 13.<br>
+            </p>
+            <img src="Picture2.jpg" alt="" srcset="" style="width: 90%;margin: auto;display: block;"><br>
+            <p style="font-size: 10px;text-align: center;width: 90%;margin: auto;display: block">Bảng 1. Đặc trưng cơ
+                bản của các vùng trong sơ đồ phân vùng bão</p>
+            <p style="font-size: 15px;">
+                Phân vùng bão Ba tháng nhiều bão nhất Tổng số bão từ 1961-2014 (cơn) Tần số bão (cơn/năm) Cấp gió mạnh
+                nhất đã ghi nhận Hệ quả mưa trong bão đã xảy ra (mm)<br>
+                <b>4. Nguy cơ gió mạnh, mưa lớn khi bão mạnh, siêu bão đổ bộ</b><br>
+                Nguy cơ gió mạnh, mưa lớn cho các vùng như sau:<br>
+                <b>Vùng I: Đông Bắc</b><br>
+                Gió trong bão có thể đạt cấp 11 - 12, giật trên cấp 13. Mưa một ngày lớn nhất trong bão có thể đạt từ
+                550 - 600 mm.<br>
+                <b>Vùng II: Tây Bắc</b><br>
+                Gió trong bão có thể đạt cấp 10 - 11, giật trên cấp 13. Mưa một ngày lớn nhất trong bão có thể đạt từ
+                350 - 400 mm.<br>
+                <b>Vùng III: Quảng Ninh đến Thanh Hóa</b><br>
+                Gió trong bão có thể đạt cấp 15 - 16, giật trên cấp 17. Mưa một ngày lớn nhất trong bão có thể đạt từ
+                700 - 750 mm. Riêng tại khu vực ven biển Quảng Ninh - Hải Phòng, gió trong bão có thể đạt cấp 16, giật
+                trên cấp 17, tại các đảo như Bạch Long Vĩ, Cô Tô,... nguy cơ cấp gió bão và gió giật trong bão mạnh nhất
+                có thể cao hơn trong đất liền từ 1 - 2 cấp.<br>
+                <b>Vùng IV: Nghệ An đến Thừa Thiên Huế</b><br>
+                Gió trong bão có thể đạt cấp 15 - 16, giật trên cấp 17. Mưa một ngày lớn nhất trong bão có thể đạt từ
+                1000 - 1050 mm. Tại các đảo ven bờ như Cồn Cỏ, Hòn Ngư, gió trong bão mạnh nhất có thể cao hơn trong đất
+                liền từ 1 - 2 cấp. Tại khu vực vùng núi phía Tây của Nghệ An, Hà Tĩnh, gió bão thấp hơn khu vực ven biển
+                do cường độ bão đã suy yếu sau khi di chuyển vào sâu trong đất liền.<br>
+                <b>Vùng V: Đà Nẵng đến Bình Định</b><br>
+                Gió trong bão có thể đạt cấp 14 - 15, giật trên cấp 16. Mưa một ngày lớn nhất trong bão có thể đạt từ
+                650 - 700 mm.<br>
+                <b>Vùng VI: Phú Yên đến Ninh Thuận</b><br>
+                Gió trong bão có thể đạt cấp 14 - 15, giật trên cấp 16. Mưa một ngày lớn nhất trong bão có thể đạt từ
+                650 - 700 mm.<br>
+                <b>Vùng VII: Tây Nguyên</b><br>
+                Gió trong bão có thể đạt cấp 10 - 11, giật trên cấp 12. Mưa một ngày lớn nhất trong bão có thể đạt từ
+                450 - 500 mm.<br>
+                <b>Vùng VIII: Bình Thuận đến Cà Mau, Kiên Giang</b><br>
+                Gió trong bão có thể đạt cấp 11 - 12, giật trên cấp 13. Mưa một ngày lớn nhất có thể đạt từ 300 - 350
+                mm. Đối với các đảo ven bờ như Phú Quý, Côn Đảo nguy cơ cấp gió bão và gió giật trong bão mạnh nhất có
+                thể cao hơn trong đất liền từ 1 - 2 cấp.<br>
+            </p>
+            <img src="Picture3.jpg" alt="" srcset="" style="width: 90%;margin: auto;display: block;"><br>
+            <p style="font-size: 10px;text-align: center;width: 90%;margin: auto;display: block">Bảng 2. Nguy cơ gió
+                mạnh, mưa lớn trong bão</p>
+            <p style="font-size: 15px;">
+                <b>5. Nhận định nguy cơ nước dâng do bão cho dải ven biển Việt Nam</b><br>
+                Nước dâng do bão cao nhất đã xảy ra tại khu vực Nghệ An, Hà Tĩnh (4,5 mét), tiếp đến là tại khu vực từ
+                Quảng Ninh đến Thanh Hóa (3,5 mét), khu vực Bình Thuận đến Bà Rịa Vũng Tàu và Mũi Cà Mau đến Kiên Giang
+                có nước dâng do bão thấp nhất (1,2 mét).<br>
+                Trong tương lai, khi có siêu bão đổ bộ, nước dâng do bão có thể lên đến 5,0 m tại khu vực Nghệ An, Hà
+                Tĩnh.<br>
+                Nhận định nguy cơ nước dâng do bão cho các vùng ven biển Việt Nam được đưa ra như sau:<br>s
+                <b>Vùng I: Quảng Ninh đến Thanh Hóa</b><br>
+                Nước dâng do bão cao nhất đã xảy ra đến 3,5 mét, trong tương lai, khi có bão mạnh, siêu bão đổ bộ, nước
+                dâng do bão có thể lên đến 4,9 mét. Biên độ thủy triều dao động từ 1,7 - 2,0 mét.<br>
+                <b>Vùng II: Nghệ An đến Thừa Thiên Huế</b><br>
+                Vùng ven biển này có thể chia thành 2 khu vực:<br>
+                <b>Khu vực II-1, từ Nghệ An đến Hà Tĩnh:</b> nước dâng do bão cao nhất đã xảy ra đến 4,5 mét, trong
+                tương lai,
+                khi có bão mạnh, siêu bão đổ bộ, nước dâng do bão có thể lên đến trên 5,0 mét. Biên độ thủy triều dao
+                động từ 1,2 - 1,7 mét.<br>
+                <b>Khu vực II-2, từ Quảng Bình đến Thừa Thiên Huế:</b> nước dâng do bão cao nhất đã xảy ra đến 3,9 mét,
+                trong
+                tương lai, khi có bão mạnh, siêu bão đổ bộ, nước dâng do bão có thể lên đến trên 4,2 mét. Biên độ thủy
+                triều dao động từ 0,5 - 1,2 mét;<br>
+                <b>Vùng III: Đà Nẵng đến Bình Định</b><br>
+                Nước dâng do bão cao nhất đã xảy ra tới 1,8 mét, trong tương lai, khi có bão mạnh, siêu bão đổ bộ, nước
+                dâng do bão có thể lên đến trên 2,3 mét. Biên độ thủy triều dao động từ 1,0 - 1,2 mét;<br>
+                <b>Vùng IV: Phú Yên đến Ninh Thuận</b><br>
+                Nước dâng do bão cao nhất đã xảy ra đến 1,7 mét, trong tương lai, khi có bão mạnh, siêu bão đổ bộ, nước
+                dâng do bão có thể lên đến trên 2,2 mét. Biên độ thủy triều dao động từ 1,2 - 1,4 mét;<br>
+                <b>Vùng V: Bình Thuận đến Cà Mau, Kiên Giang</b><br>
+                Vùng ven biển này có thể chia thành 3 khu vực:<br>
+                <b>Khu vực V-1, từ Bình Thuận đến Bà Rịa Vũng Tàu</b> nước dâng do bão cao nhất đã xảy ra đến 1,2 mét,
+                trong
+                tương lai, khi có bão mạnh đổ bộ, nước dâng do bão có thể lên đến trên 2,0 mét. Biên độ thủy triều dao
+                động từ 1,4 - 1,8 mét;<br>
+                <b>Khu vực V-2, từ TP. Hồ Chí Minh đến mũi Cà Mau:</b> nước dâng do bão cao nhất đã xảy ra đến 2,0 mét,
+                trong
+                tương lai, khi có bão mạnh đổ bộ, nước dâng do bão có thể lên đến trên 2,7 mét. Biên độ thủy triều dao
+                động từ 1,8 - 2,0 mét.<br>
+                <b>Khu vực V-3, từ mũi Cà Mau đến Kiên Giang:</b> nước dâng do bão cao nhất đã xảy ra đến 1,2 mét, trong
+                tương
+                lai, khi có bão mạnh đổ bộ, nước dâng do bão có thể lên đến trên 2,1 mét. Biên độ thủy triều trong khu
+                vực này dao động trong khoảng từ 0,8-1,1 mét.<br>
+            </p>
+            <img src="Picture4.jpg" alt="" srcset="" style="width: 90%;margin: auto;display: block;"><br>
+            <p style="font-size: 10px;text-align: center;width: 90%;margin: auto;display: block">Bảng 3. Nguy cơ nước
+                dâng do bão cho các vùng ven biển Việt Nam</p><br>
+        </div>
+        <div id="slidebar" class="body-section">
+            <h2>Thời tiết ngày mai</h2>
+        </div>
+    </div>
+</body>
+<script src="gadm36_VNM_1.js"></script>
+<script src="gadm36_VNisland.js"></script>
+<script src="draw-map.js"></script>
+
+
+</html>

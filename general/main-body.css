@@ -1,0 +1,96 @@
+#main-body{
+    padding: 0 10%;
+    display: flex;
+    align-items: flex-start;
+}
+.body-section{
+    margin: 5px;
+    padding: 10px;
+    background-color: #393E46;
+    border: black 1px solid;
+    border-radius: 10px;
+}
+
+#content{
+    flex: 6 1 0;
+}
+#slide-bar{
+    flex: 4 1 0;
+}
+#map{
+    width: 100%; 
+    padding-bottom: 56.25%; 
+    position: relative;
+}
+
+#map *{
+    transition: 0s;
+}
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+#list-content{
+    display: flex;
+    flex-direction: column-reverse;
+}
+#list-content .item{
+    display: flex;
+    color: #eee;
+    margin: 5px;
+    flex: 1 1 0;
+}
+#list-content .item:hover{
+    background-color: #444a54;
+    cursor: pointer;
+}
+#list-content .item .contain-preview-img{
+    flex: 25 1 0;
+}
+#list-content .item .contain-preview-text{
+    flex: 75 1 0;
+    position: relative;
+}
+#list-content .item .contain-preview-text .title{
+    font-size: 17px;
+    border: none;
+    margin: 0;
+    padding: 0 10px;
+}
+#list-content .item .contain-preview-text .see-more{
+    bottom: 10px;
+    right: 10px;
+    position: absolute;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: #7a78a8;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#list-content .item .contain-preview-text .see-more:hover{
+    background-color: #15a4fa;
+    
+}
+#list-content .item .preview-image{
+    width: 100%;
+}

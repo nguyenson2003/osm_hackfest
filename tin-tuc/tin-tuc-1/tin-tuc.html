@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BẢN TIN DỰ BÁO, CẢNH BÁO XU THẾ THỜI TIẾT TRÊN ĐẤT LIỀN THỜI HẠN ĐẾN 10 NGÀY (TỪ ĐÊM 23 ĐẾN NGÀY 02/8)</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="../../general/nav.css">
+    <link rel="stylesheet" href="../../general/main-body.css">
+    <link rel="stylesheet" href="../../general/main.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li><a href="">Trang chủ</a></li>
+            <li><a href="">Tin tức</a></li>
+            <li><a href="">Thống kê</a></li>
+            <li><a href="">Bản đồ</a></li>
+            <li><a href="">Về chúng tôi</a></li>
+        </ul>
+    </div>
+    <div id="main-body">
+        <div id="content" class="body-section">
+            <h1>
+                BẢN TIN DỰ BÁO, CẢNH BÁO XU THẾ THỜI TIẾT TRÊN ĐẤT LIỀN THỜI HẠN ĐẾN 10 NGÀY (TỪ ĐÊM 23 ĐẾN NGÀY 02/8)
+            </h1>
+            <p style="font-size: 15px;">
+                <img style="width: 90%;margin: auto;display: block;" src="Picture1.jpg"><br>
+                <b>Dự báo thời tiết các khu vực trong 24 đến 48 giờ tới</b><br>
+                <b> - Bắc Bộ và Bắc Trung Bộ:</b> đêm có mưa rào và dông vài nơi, ngày nắng nóng; riêng phía Tây Bắc Bộ đêm
+                23/7 có mưa rào rải rác và có nơi có dông.<br>
+                <b> - Trung và Nam Trung Bộ:</b> có mưa rào và dông rải rác, cục bộ có mưa to.<br>
+                <b> - Tây Nguyên và Nam Bộ:</b> chiều và tối có mưa vừa, mưa to, cục bộ có mưa rất to và rải rác có dông.
+                Trong mưa dông có khả năng xảy ra lốc, sét, mưa đá và gió giật mạnh.<br>
+                <br>
+                <b>Nhận định hình thế thời tiết từ đêm 25/7 đến ngày 02/8</b><br>
+                <b> - Bắc Bộ và Thanh Hóa:</b> từ 26-27/7 có nắng nóng; từ đêm 27/7-02/8 có mưa rào và dông rải rác.<br>
+                <b> - Trung Bộ:</b> từ Nghệ An đến Phú Yên: từ ngày 26-28/7 có nắng nóng; từ ngày 29/7 có nắng nóng cục bộ.<br>
+                <b> - Tây Nguyên và Nam Bộ:</b> chiều và tối có mưa, mưa vừa, có nơi mưa to và rải rác có dông.<br>
+                Trong mưa dông có khả năng xảy ra lốc, sét, mưa đá và gió giật mạnh.<br>
+
+
+            </p>
+        </div>
+        <div id="slidebar" class="body-section">
+            <h2>Thời tiết ngày mai</h2>
+        </div>
+    </div>
+</body>
+<script src="gadm36_VNM_1.js"></script>
+<script src="gadm36_VNisland.js"></script>
+<script src="draw-map.js"></script>
+
+
+</html>

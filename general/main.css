@@ -8,12 +8,12 @@ body {
     background-color: #222831;
     position: relative;
     margin: 0;
+    min-width: 1000px;
 }
-
-#map{
-    position: absolute;
-    color: black;
+h1,h2{
+    color: #B4B1FF;
+    border-bottom: #B4B1FF 1px solid;
 }
-#map *{
-    transition: 0s;
+a{
+    text-decoration: none;
 }
