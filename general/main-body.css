@@ -24,6 +24,7 @@
 }
 
 #map *{
+    color: gray;
     transition: 0s;
 }
 .info {
@@ -93,4 +94,23 @@
 }
 #list-content .item .preview-image{
     width: 100%;
+}
+
+#container-weather {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+#container-weather .weather-header{
+    background-color: #7a78a8;
+    padding: 10px;
+    font-weight: bolder;
+}
+#container-weather #weather-body{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

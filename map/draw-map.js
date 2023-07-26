@@ -9,11 +9,45 @@ map.locate({ setView: true, maxZoom: 16 });
 //bật định vị
 function onLocationFound(e) {
     var radius = e.accuracy;
-
     L.marker(e.latlng).addTo(map)
         .bindPopup("You are within " + radius + " meters from this point").openPopup();
-
     L.circle(e.latlng, radius).addTo(map);
+
+
+    var lat = e.latlng.lat;
+    var lng = e.latlng.lng;
+    var api_key = 'cd1a5f6ad179bf296cb39abd5e662678';
+    var url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${api_key}`;
+    console.log(url);
+    fetch(url)
+        .then(response=>{
+            if(!response.ok)throw new Error(response.statusText);
+            return response.json();
+        })
+        .then(data => {
+            var weather_widget = `<div class="weather-right__temperature">${(data['main']['temp']-273).toFixed(0)}<span>°C</span></div>
+            <table class="weather-right__table">
+                <tbody>
+                    <tr class="weather-right__items">
+                        <th colspan="2" class="weather-right__item">Chi tiết</th>
+                    </tr>
+                    <tr class="weather-right__items">
+                        <td class="weather-right__item">Nhiệt độ</td>
+                        <td class="weather-right__item weather-right__feels">${(data['main']['feels_like']-273).toFixed(1)}<span>°C</span></td>
+                    </tr>
+                    <tr class="weather-right__items">
+                        <td class="weather-right__item">Tốc độ gió</td>
+                        <td class="weather-right__item weather-right__wind-speed">${data.wind.speed.toFixed(1)} m/s </td>
+                    </tr>
+                    <tr class="weather-right-card__items">
+                        <td class="weather-right__item">Độ ẩm</td>
+                        <td class="weather-right__item weather-right__humidity">${(data['main']['humidity']).toFixed(1)}%</td>
+                    </tr>
+                </tbody>
+            </table>`;
+            document.getElementById("weather-body").innerHTML=weather_widget;
+        })
+        .catch()
 }
 map.on('locationfound', onLocationFound);
 //không bật định vị
@@ -33,14 +67,14 @@ map.on('click', onMapClick);
 
 //draw vn
 function getColor(d) {
-    return  d > 1000 ? '#800026' :
-            d > 500 ? '#BD0026' :
+    return d > 1000 ? '#800026' :
+        d > 500 ? '#BD0026' :
             d > 200 ? '#E31A1C' :
-            d > 100 ? '#FC4E2A' :
-            d > 50 ? '#FD8D3C' :
-            d > 20 ? '#FEB24C' :
-            d > 10 ? '#FED976' :
-            '#FFEDA0';
+                d > 100 ? '#FC4E2A' :
+                    d > 50 ? '#FD8D3C' :
+                        d > 20 ? '#FEB24C' :
+                            d > 10 ? '#FED976' :
+                                '#FFEDA0';
 }
 function style(feature) {
     return {
@@ -97,7 +131,7 @@ info.update = function (props) {
 info.addTo(map);
 
 //bảng chú giải
-var legend = L.control({position: 'bottomright'});
+var legend = L.control({ position: 'bottomright' });
 legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend'),
         grades = [0, 10, 20, 50, 100, 200, 500, 1000],
