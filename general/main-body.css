@@ -1,9 +1,10 @@
-#main-body{
+#main-body {
     padding: 0 10%;
     display: flex;
     align-items: flex-start;
 }
-.body-section{
+
+.body-section {
     margin: 5px;
     padding: 10px;
     background-color: #393E46;
@@ -11,38 +12,44 @@
     border-radius: 10px;
 }
 
-#content{
+#content {
     flex: 6 1 0;
 }
-#slide-bar{
+
+#slide-bar {
     flex: 4 1 0;
 }
-#map{
-    width: 100%; 
-    padding-bottom: 56.25%; 
+
+#map {
+    width: 100%;
+    padding-bottom: 56.25%;
     position: relative;
 }
 
-#map *{
+#map * {
     color: gray;
     transition: 0s;
 }
+
 .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
     background: white;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
+
 .info h4 {
     margin: 0 0 5px;
     color: #777;
 }
+
 .legend {
     line-height: 18px;
     color: #555;
 }
+
 .legend i {
     width: 18px;
     height: 18px;
@@ -50,34 +57,40 @@
     margin-right: 8px;
     opacity: 0.7;
 }
-#list-content{
+
+#list-content {
     display: flex;
     flex-direction: column-reverse;
 }
-#list-content .item{
+
+#list-content .item {
     display: flex;
     color: #eee;
     margin: 5px;
-    flex: 1 1 0;
 }
-#list-content .item:hover{
+
+#list-content .item:hover {
     background-color: #444a54;
     cursor: pointer;
 }
-#list-content .item .contain-preview-img{
+
+#list-content .item .contain-preview-img {
     flex: 25 1 0;
 }
-#list-content .item .contain-preview-text{
+
+#list-content .item .contain-preview-text {
     flex: 75 1 0;
     position: relative;
 }
-#list-content .item .contain-preview-text .title{
+
+#list-content .item .contain-preview-text .title {
     font-size: 17px;
     border: none;
     margin: 0;
     padding: 0 10px;
 }
-#list-content .item .contain-preview-text .see-more{
+
+#list-content .item .contain-preview-text .see-more {
     bottom: 10px;
     right: 10px;
     position: absolute;
@@ -88,11 +101,13 @@
     font-size: 15px;
     font-weight: bold;
 }
-#list-content .item .contain-preview-text .see-more:hover{
+
+#list-content .item .contain-preview-text .see-more:hover {
     background-color: #15a4fa;
-    
+
 }
-#list-content .item .preview-image{
+
+#list-content .item .preview-image {
     width: 100%;
 }
 
@@ -103,14 +118,57 @@
     overflow: hidden;
 
 }
-#container-weather .weather-header{
+
+#container-weather .weather-header {
     background-color: #7a78a8;
     padding: 10px;
     font-weight: bolder;
 }
-#container-weather #weather-body{
+
+#container-weather #weather-body {
     background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.home-article {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* .home-article  */
+.home-article .title-link {
+    background-color: #7a78a8;
+    margin: 0;
+    padding: 10px;
+}
+
+.home-article #contain-news {
+    display: flex;
+}
+
+.home-article #contain-news .first-new {
+    position: relative;
+}
+
+.home-article #contain-news .first-new .subtitle {
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    right: 0;
+    height: 0;
+    display: flex;
+    align-items: end;
+    background-image: linear-gradient(0deg, black, rgba(0, 0, 0, 0));
+}
+
+.home-article #contain-news .first-new:hover .subtitle {
+    height: 100%;
+    bottom: 0;
+}
+
+.home-article #contain-news .first-new img {
+    width: 100%;
 }

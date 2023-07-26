@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="../general/nav.css">
+    <link rel="stylesheet" href="../general/main-body.css">
+    <link rel="stylesheet" href="../general/main.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li><a href="../trang-chu/trang-chu.html">Trang chủ</a></li>
+            <li><a href="../tin-tuc/tin-tuc.html">Tin tức</a></li>
+            <li><a href="../thong-ke/thong-ke.html">Thống kê</a></li>
+            <li><a href="../map/map.html">Bản đồ</a></li>
+        </ul>
+    </div>
+    <div id="main-body">
+        <div id="content" class="body-section">
+            <h1>
+                Website cảnh báo phòng chống thiên tai lũ lụt
+            </h1>
+            <div class="home-article">
+                <h2 class="title-link">
+                    <a href="../tin-tuc/tin-tuc.html" style="display: block;">
+                        Tin tức nổi bật
+                    </a>
+                </h2>
+                <div class="home-article-main">
+                    <div id="contain-news">
+                        <div class="first-new" style="width: 0;flex:1 1 0">
+                            <a href="../tin-tuc/tin-tuc-1/tin-tuc.html">
+                                <img src="../tin-tuc/tin-tuc-1/Picture1.jpg" alt="">
+                                <div class="subtitle">BẢN TIN DỰ BÁO, CẢNH BÁO XU THẾ THỜI TIẾT TRÊN ĐẤT LIỀN THỜI HẠN ĐẾN 10 NGÀY (TỪ ĐÊM 23 ĐẾN NGÀY 02/8)</div>
+                            </a>
+                        </div>
+                        <div id="list-content" style="flex: 1 1 0;justify-content: space-between;">
+                            <a href="../tin-tuc/tin-tuc-2/tin-tuc.html">
+                                <div class="item">
+                                    <div class="contain-preview-img">
+                                        <img src="../tin-tuc/tin-tuc-2/Picture1.jpg" alt="preview image"
+                                            class="preview-image">
+                                    </div>
+                                    <div class="contain-preview-text">
+                                        <h2 class="title">
+                                            PHÂN CHIA 8 VÙNG ẢNH HƯỞNG CỦA BÃO TRÊN LÃNH THỔ VIỆT NAM
+                                        </h2>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="../tin-tuc/tin-tuc-3/tin-tuc.html">
+                                <div class="item">
+                                    <div class="contain-preview-img">
+                                        <img src="../tin-tuc/tin-tuc-3/Picture1.jpg" alt="preview image"
+                                            class="preview-image">
+                                    </div>
+                                    <div class="contain-preview-text">
+                                        <h2 class="title">
+                                            Quảng Ngãi công bố tình huống khẩn cấp sạt lở một khu vực bờ biển
+                                        </h2>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="../tin-tuc/tin-tuc-4/tin-tuc.html">
+                                <div class="item">
+                                    <div class="contain-preview-img">
+                                        <img src="../tin-tuc/tin-tuc-4/Picture1.jpg" alt="preview image"
+                                            class="preview-image">
+                                    </div>
+                                    <div class="contain-preview-text">
+                                        <h2 class="title">
+                                            Sạt lở đất nghiêm trọng tại Đà Lạt, 2 người bị vùi lấp, nhiều người bị
+                                            thương
+                                        </h2>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-article">
+                <h2 class="title-link">
+                    <a href="../tin-tuc/tin-tuc.html" style="display: block;">
+                        Cảnh báo thiên tai thời tiết
+                    </a>
+                </h2>
+                <div class="home-article-main">
+                    <div id="contain-news">
+
+                        <div id="list-content" style="flex: 1 1 0;justify-content: space-between;">
+                            <a href="../tin-tuc/tin-tuc-2/tin-tuc.html">
+                                <div class="item">
+                                    <div class="contain-preview-img">
+                                        <img src="../tin-tuc/tin-tuc-2/Picture1.jpg" alt="preview image"
+                                            class="preview-image">
+                                    </div>
+                                    <div class="contain-preview-text">
+                                        <h2 class="title">
+                                            PHÂN CHIA 8 VÙNG ẢNH HƯỞNG CỦA BÃO TRÊN LÃNH THỔ VIỆT NAM
+                                        </h2>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="../tin-tuc/tin-tuc-3/tin-tuc.html">
+                                <div class="item">
+                                    <div class="contain-preview-img">
+                                        <img src="../tin-tuc/tin-tuc-3/Picture1.jpg" alt="preview image"
+                                            class="preview-image">
+                                    </div>
+                                    <div class="contain-preview-text">
+                                        <h2 class="title">
+                                            Quảng Ngãi công bố tình huống khẩn cấp sạt lở một khu vực bờ biển
+                                        </h2>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="../tin-tuc/tin-tuc-4/tin-tuc.html">
+                                <div class="item">
+                                    <div class="contain-preview-img">
+                                        <img src="../tin-tuc/tin-tuc-4/Picture1.jpg" alt="preview image"
+                                            class="preview-image">
+                                    </div>
+                                    <div class="contain-preview-text">
+                                        <h2 class="title">
+                                            Sạt lở đất nghiêm trọng tại Đà Lạt, 2 người bị vùi lấp, nhiều người bị
+                                            thương
+                                        </h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-new" style="width: 0;flex:1 1 0">
+                            <a href="../tin-tuc/tin-tuc-1/tin-tuc.html">
+                                <img src="../tin-tuc/tin-tuc-1/Picture1.jpg" alt="">
+                            </a>
+                            <div class="subtitle">BẢN TIN DỰ BÁO, CẢNH BÁO XU THẾ THỜI TIẾT TRÊN ĐẤT LIỀN THỜI HẠN ĐẾN 10 NGÀY (TỪ ĐÊM 23 ĐẾN NGÀY 02/8)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+</html>
