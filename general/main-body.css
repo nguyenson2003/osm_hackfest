@@ -172,3 +172,6 @@
 .home-article #contain-news .first-new img {
     width: 100%;
 }
+.home-article #contain-news .list-warning:hover {
+    background-color: #444a54;
+}
