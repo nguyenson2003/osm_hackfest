@@ -11,7 +11,7 @@ function onLocationFound(e) {
     var lat = e.latlng.lat;
     var lng = e.latlng.lng;
     var api_key = 'cd1a5f6ad179bf296cb39abd5e662678';
-    var url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lng}&appid=${api_key}`;
+    var url = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lng}&appid=${api_key}`;
     console.log(url);
     fetch(url)
         .then(response => {
