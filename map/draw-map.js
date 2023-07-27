@@ -5,13 +5,12 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
-map.locate({ setView: true, maxZoom: 16 });
 //bật định vị
 function onLocationFound(e) {
     var radius = e.accuracy;
-    // L.marker(e.latlng).addTo(map)
-    //     .bindPopup("You are within " + radius + " meters from this point").openPopup();
-    // L.circle(e.latlng, radius).addTo(map);
+    L.marker(e.latlng).addTo(map)
+        .bindPopup("Bạn đang ở đây").openPopup();
+    L.circle(e.latlng, radius).addTo(map);
 
 
     var lat = e.latlng.lat;
@@ -32,7 +31,7 @@ function onLocationFound(e) {
                         <th colspan="2" class="weather-right__item">Chi tiết</th>
                     </tr>
                     <tr class="weather-right__items">
-                        <td class="weather-right__item">Nhiệt độ</td>
+                        <td class="weather-right__item">Nhiệt độ cảm nhận</td>
                         <td class="weather-right__item weather-right__feels">${(data['main']['feels_like']-273).toFixed(1)}<span>°C</span></td>
                     </tr>
                     <tr class="weather-right__items">
@@ -47,7 +46,11 @@ function onLocationFound(e) {
             </table>`;
             document.getElementById("weather-body").innerHTML=weather_widget;
         })
-        .catch()
+        .catch();
+    
+    
+    
+
 }
 map.on('locationfound', onLocationFound);
 //không bật định vị
@@ -155,3 +158,5 @@ L.geoJson(island_data, {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
+
+map.locate({ setView: true, maxZoom: 6 });
