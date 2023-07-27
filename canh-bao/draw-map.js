@@ -121,10 +121,53 @@ function setWidget(lat, lng, nameState) {
                         <li>Ngày 5: ${list_rain[4].toFixed(2)}mm</li>
                     </ul>
                 </ul>
-                Khả năng xãy ra mưa lũ: ${Math.min((total_rain / (272 * 5) * 100).toFixed(2), 90.00)}% <br>
+                Khả năng xãy ra mưa lũ: <span style="color:#B4B1FF;font-weight:bolder">${Math.min((total_rain / (272 * 5) * 100).toFixed(2), 90.00)}%</span> <br>
                 <i>(giá trị được ước tính chung trên lý thuyết, ở một số nơi như thành thị sẽ có khả năng xảy ra lũ thấp hơn dự kiến)</i>
                 `
                 document.getElementById("rain-widget").innerHTML = rain_widget;
+
+
+            })
+            .catch();
+    }
+    if (document.getElementById("wind-widget")) {
+        var url3 = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&appid=${api_key}`
+        console.log(url3)
+        fetch(url3)
+            .then(response => {
+                if (!response.ok) throw new Error(response.statusText);
+                return response.json();
+            })
+            .then(data => {
+                var list_wind = [0, 0, 0, 0, 0];
+                var max_wind = 0;
+                for (let i = 0; i < 5; i++) {
+                    for (let j = 0; j < 6; j++) {
+                        list_wind[i] =Math.max(list_wind[i], data.list[i * 6 + j].wind.speed);
+                    }
+                    list_wind[i]*=3.6;
+                    max_wind = Math.max(list_wind[i], max_wind);
+                }
+                var wind_widget = `
+                Tốc độ gió tối đa trong 5 ngày tới tại vị trí của bạn:
+                <ul>
+                    <li>Hôm nay: ${list_wind[0].toFixed(2)}km/h</li>
+                    <li>Ngày 2: ${list_wind[1].toFixed(2)}km/h</li>
+                    <li>Ngày 3: ${list_wind[2].toFixed(2)}km/h</li>
+                    <li>Ngày 4: ${list_wind[3].toFixed(2)}km/h</li>
+                    <li>Ngày 5: ${list_wind[4].toFixed(2)}km/h</li>
+                </ul>
+                Dựa vào bảng số liệu có thể thấy 5 ngày tiếp theo: <span style="color:#B4B1FF;font-weight:bolder">${
+                    max_wind<19?'Gió nhẹ, không gây nguy hại.':
+                    max_wind<38?'Cây nhỏ có lá bắt đầu lay động, ảnh hưởng đến lúa đang phơi màu. Biển hơi động. Thuyền đánh cá bị chao nghiêng, phải cuốn bớt buồm.':
+                    max_wind<61?'Cây cối rung chuyển. Khó đi ngược gió. Biển động. Nguy hiểm đối với tàu, thuyền.':
+                    max_wind<88?'Gió làm gãy cành cây, tốc mái nhà gây thiệt hại về nhà cửa. Không thể đi ngược gió. Biển động rất mạnh. Rất nguy hiểm đối với tàu, thuyền.':
+                    max_wind<117?'Làm đổ cây cối, nhà cửa, cột điện. Gây thiệt hại rất nặng. Biển động dữ đội. Làm đắm tàu biển.':
+                    'Sức phá hoại cực kỳ lớn. Sóng biển cực kỳ mạnh. Đánh đắm tàu biển có trọng tải lớn.'
+                    
+                }</span>
+                `
+                document.getElementById("wind-widget").innerHTML = wind_widget;
 
 
             })
