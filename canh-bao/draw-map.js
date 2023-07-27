@@ -149,7 +149,7 @@ function setWidget(lat, lng, nameState) {
                     max_wind = Math.max(list_wind[i], max_wind);
                 }
                 var wind_widget = `
-                Tốc độ gió tối đa trong 5 ngày tới tại vị trí của bạn:
+                Tốc độ gió tối đa trong 5 ngày tới tại ${nameState}:
                 <ul>
                     <li>Hôm nay: ${list_wind[0].toFixed(2)}km/h</li>
                     <li>Ngày 2: ${list_wind[1].toFixed(2)}km/h</li>
