@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../general/nav.css">
     <link rel="stylesheet" href="../../general/main-body.css">
     <link rel="stylesheet" href="../../general/main.css">
+    <link rel="stylesheet" href="../../general/footer.css">
 </head>
 
 <body>
@@ -21,8 +22,7 @@
         <ul>
             <li><a href="../../trang-chu/trang-chu.html">Trang chủ</a></li>
             <li><a href="../../tin-tuc/tin-tuc.html">Tin tức</a></li>
-            <li><a href="../../thong-ke/thong-ke.html">Thống kê</a></li>
-            <li><a href="../../map/map.html">Bản đồ</a></li>
+            <li><a href="../../canh-bao/canh-bao.html">Cảnh báo</a></li>
         </ul>
     </div>
     <div id="main-body">
@@ -67,13 +67,74 @@
 
         </div>
         <div id="slidebar" class="body-section">
-            <h2>Thời tiết ngày mai</h2>
+            <h2>Thời tiết</h2>
+            <div id="openweathermap-widget-15" style="display: none;"></div>
+            <script>
+                window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                window.myWidgetParam.push({ id: 15, cityid: '1562822', appid: 'cd1a5f6ad179bf296cb39abd5e662678', units: 'metric', containerid: 'openweathermap-widget-15', });
+                (function () {
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.charset = "utf-8";
+                    script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(script, s);
+                })();
+            </script>
+            <div id="container-weather">
+                <div class="weather-header">
+                    Vị trí của bạn
+                </div>
+                <div id="weather-body">
+                    <div class="weather-right__temperature">~<span>°C</span></div>
+                    <table class="weather-right__table">
+                        <tbody>
+                            <tr class="weather-right__items">
+                                <th colspan="2" class="weather-right__item">Chi tiết</th>
+                            </tr>
+                            <tr class="weather-right__items">
+                                <td class="weather-right__item">Nhiệt độ</td>
+                                <td class="weather-right__item weather-right__feels">~<span>°C</span></td>
+                            </tr>
+                            <tr class="weather-right__items">
+                                <td class="weather-right__item">Tốc độ gió</td>
+                                <td class="weather-right__item weather-right__wind-speed">~ m/s </td>
+                            </tr>
+                            <tr class="weather-right-card__items">
+                                <td class="weather-right__item">Độ ẩm</td>
+                                <td class="weather-right__item weather-right__humidity">~%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
+    <div id="map" style="display: none;"></div>
+    <footer>
+        <div class="member">
+            <h2>Nhóm Overthinking:</h2>
+            <ul>
+                <li>Nguyễn Quỳnh Sơn (nhóm trưởng)</li>
+                <li>Lê Thanh Huyền</li>
+                <li>Nguyễn Quốc Khánh</li>
+                <li>Nguyễn Đắc Anh</li>
+                <li>Lê Thị Quỳnh Anh</li>
+            </ul>
+        </div>
+        <div>
+
+            <div class="contact">
+                <h2>Liên hệ:</h2>
+                <ul>
+                    <li>Hotline: 0946123636</li>
+                    <li>Gmail: nqson123@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
-<script src="gadm36_VNM_1.js"></script>
-<script src="gadm36_VNisland.js"></script>
-<script src="draw-map.js"></script>
+<script src="../draw-map.js"></script>
 
 
 </html>

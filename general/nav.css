@@ -4,7 +4,7 @@
     background-color: #393E46;
     top:0;
     width: 100%;
-    z-index: 100;
+    z-index: 10000;
     border-bottom: #222831 3px solid;
 }
 

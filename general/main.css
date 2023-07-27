@@ -1,6 +1,10 @@
 *{
     transition: 0.5s;
 }
+html{
+    scroll-behavior: smooth;
+
+}
 body {
     font-family: Roboto ,Arial, Helvetica, sans-serif;
     font-size: 20px;

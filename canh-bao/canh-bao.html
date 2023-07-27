@@ -5,47 +5,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIN CẢNH BÁO GIÓ MẠNH, SÓNG LỚN VÀ MƯA DÔNG TRÊN BIỂN</title>
+    <title>Cảnh báo thiên tai, thời tiết</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <!-- put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <link rel="stylesheet" href="../../general/nav.css">
-    <link rel="stylesheet" href="../../general/main-body.css">
-    <link rel="stylesheet" href="../../general/main.css">
-    <link rel="stylesheet" href="../../general/footer.css">
+    <link rel="stylesheet" href="../general/nav.css">
+    <link rel="stylesheet" href="../general/main-body.css">
+    <link rel="stylesheet" href="../general/main.css">
+    <link rel="stylesheet" href="../general/footer.css">
 </head>
 
 <body>
     <div class="navigation">
         <ul>
-            <li><a href="../../trang-chu/trang-chu.html">Trang chủ</a></li>
-            <li><a href="../../tin-tuc/tin-tuc.html">Tin tức</a></li>
-            <li><a href="../../canh-bao/canh-bao.html">Cảnh báo</a></li>
+            <li><a href="../trang-chu/trang-chu.html">Trang chủ</a></li>
+            <li><a href="../tin-tuc/tin-tuc.html">Tin tức</a></li>
+            <li><a href="../canh-bao/canh-bao.html">Cảnh báo</a></li>
         </ul>
     </div>
     <div id="main-body">
         <div id="content" class="body-section">
             <h1>
-                TIN CẢNH BÁO GIÓ MẠNH, SÓNG LỚN VÀ MƯA DÔNG TRÊN BIỂN
+                Cảnh báo thiên tai, thời tiết
             </h1>
-            <img src="Picture1.jpg" alt="" srcset="" style="width: 90%;margin: auto;display: block;">
-            <p style="font-size: 15px;">
-                <b>Hiện nay (24/7),</b> ở khu vực Giữa và Nam Biển Đông (bao gồm vùng biển quần đảo Trường Sa), vùng biển từ Cà
-                Mau đến Kiên Giang và vịnh Thái Lan đang có mưa rào và dông.
-                <b>Dự báo:</b> ngày và đêm 24/7, ở vùng biển từ Ninh Thuận đến Cà Mau, khu vực Giữa và Nam Biển Đông (bao gồm
-                vùng biển quần đảo Trường Sa) có gió Tây Nam mạnh cấp 5, có lúc cấp 6, giật cấp 7-8; biển động; sóng
-                biển cao từ 2,0-3,5m.<br>
-                <b>Trong ngày và đêm 24/7,</b> khu vực Giữa và Nam Biển Đông (bao gồm vùng biển quần đảo Trường Sa), vùng biển
-                từ Bình Thuận đến Cà Mau, Cà Mau đến Kiên Giang và vịnh Thái Lan có mưa rào và dông mạnh. Trong mưa dông
-                có khả năng xảy ra lốc xoáy và gió giật mạnh.<br>
-                <b>Cảnh báo:</b> ngày và đêm 25/7, vùng biển từ Ninh Thuận đến Bình Thuận, khu vực Giữa và Nam Biển Đông (bao
-                gồm vùng biển quần đảo Trường Sa) có gió Tây Nam mạnh cấp 6, giật cấp 8-9; biển động; sóng biển cao
-                2,0-4,0m. Vùng biển phía Đông khu vực Bắc Biển Đông có gió mạnh cấp 6-7, giật cấp 9; biển động mạnh;
-                sóng biển cao 3,0-5,0m.<br>
-                <i style="float: right;">Tin phát tiếp theo lúc 16h00 ngày 24/7.</i><br>
-            </p>
+            <div class="home-article">
+                <h2 class="title-link">
+                    <a style="display: block;">
+                        Cảnh báo lũ quét
+                    </a>
+                </h2>
+                <div class="home-article-main" style="display: block;">
+                    <div id="rain-widget">
+                        Đánh giá lượng mưa ở khu vực bạn:
+                        <ul>
+                            <li>Tổng lượng mưa trong 5 ngày: ~mm</li>
+                            <ul>
+                                <li>Hôm nay: ~mm</li>
+                                <li>Ngày 2: ~mm</li>
+                                <li>Ngày 3: ~mm</li>
+                                <li>Ngày 4: ~mm</li>
+                                <li>Ngày 5: ~mm</li>
+                            </ul>
+                        </ul>
+                        Khả năng xãy ra mưa lũ: ~% <br>
+                        <i>(giá trị ước tính chung trên lý thuyết, ở một số nơi như thành thị sẽ có khả năng xảy ra lũ
+                            thấp hơn dự kiến)</i>
+                    </div>
+                </div>
+            </div>
+            <div class="home-article">
+                <h2 class="title-link">
+                    <a style="display: block;">
+                        Cảnh báo mức độ ô nhiễm môi trường
+                    </a>
+                </h2>
+                <div class="home-article-main" style="display: block;">
+                    <img src="Picture1.jpg" alt="" srcset="" style="width: 50%;margin: auto;display: block;">
+                    <p style="font-size: 10px;text-align: center;"> Bảng đánh giá mức độ ô nhiễm môi trường</p>
+                    <div id="air-widget">
+                        Nồng độ không khí ô nhiễm ở khu vực bạn
+                        <ul>
+                            <li>SO<sub>2</sub>: ~ μg/m<sup>3</sup></li>
+                            <li>NO<sub>2</sub>: ~ μg/m<sup>3</sup></li>
+                            <li>PM<sub>10</sub>: ~ μg/m<sup>3</sup></li>
+                            <li>PM<sub>2.5</sub>: ~ μg/m<sup>3</sup></li>
+                            <li>O<sub>3</sub>: ~ μg/m<sup>3</sup></li>
+                            <li>CO: ~ μg/m<sup>3</sup></li>
+                        </ul>
+                        Mức độ: ~/5
+                    </div>
+                </div>
+            </div>
+            <div class="home-article">
+                <h2 class="title-link">
+                    <a style="display: block;">
+                        Bản đồ
+                    </a>
+                </h2>
+                <div class="container-map" style="width: 100%;margin: auto;">
+                    <div id="map"></div>
+
+                </div>
+                <p>Chọn một vị trí trên bản đồ để tính toán các khả năng xảy ra thiên tai thời tiết</p>
+            </div>
         </div>
         <div id="slidebar" class="body-section">
             <h2>Thời tiết</h2>
@@ -91,7 +135,6 @@
             </div>
         </div>
     </div>
-    <div id="map" style="display: none;"></div>
     <footer>
         <div class="member">
             <h2>Nhóm Overthinking:</h2>
@@ -115,7 +158,9 @@
         </div>
     </footer>
 </body>
-<script src="../draw-map.js"></script>
-
+<!-- <script src="get-weather.js"></script> -->
+<script src="gadm36_VNM_1.js"></script>
+<script src="gadm36_VNisland.js"></script>
+<script src="draw-map.js"></script>
 
 </html>

@@ -24,7 +24,7 @@ var island_data = {
             }
         },
         {
-            "type": "Feature", "id": "02", "properties": { "NAME_1": "Trường Sa (Khánh Hỏa)" },
+            "type": "Feature", "id": "02", "properties": { "NAME_1": "Trường Sa (Khánh Hòa)" },
             "geometry": {
                 "type": "Polygon",
                 "coordinates":
