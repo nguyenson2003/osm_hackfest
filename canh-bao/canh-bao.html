@@ -62,7 +62,7 @@
                     </a>
                 </h2>
                 <div class="home-article-main" style="display: block;">
-                    <img src="Picture1.jpg" alt="" srcset="" style="width: 50%;margin: auto;display: block;">
+                    <img src="Picture1.jpg" alt="" srcset="" style="width: 75%;margin: auto;display: block;">
                     <p style="font-size: 10px;text-align: center;"> Bảng đánh giá mức độ ô nhiễm môi trường</p>
                     <div id="air-widget">
                         Nồng độ không khí ô nhiễm ở khu vực bạn
@@ -81,56 +81,69 @@
             <div class="home-article">
                 <h2 class="title-link">
                     <a style="display: block;">
-                        Bản đồ
+                        Cảnh báo gió bão
                     </a>
                 </h2>
+                <div class="home-article-main" style="display: block;">
+                    
+                    <p style="font-size: 10px;text-align: center;"> </p>
+                    <div id="wind-widget">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="slidebar" style="flex:5 1 0">
+            <div class="body-section" >
+                <h2>Thời tiết</h2>
+                <div id="openweathermap-widget-15" style="display: none;"></div>
+                <script>
+                    window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                    window.myWidgetParam.push({ id: 15, cityid: '1562822', appid: 'cd1a5f6ad179bf296cb39abd5e662678', units: 'metric', containerid: 'openweathermap-widget-15', });
+                    (function () {
+                        var script = document.createElement('script');
+                        script.async = true;
+                        script.charset = "utf-8";
+                        script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(script, s);
+                    })();
+                </script>
+                <div id="container-weather">
+                    <div class="weather-header">
+                        Vị trí của bạn
+                    </div>
+                    <div id="weather-body">
+                        <div class="weather-right__temperature">~<span>°C</span></div>
+                        <table class="weather-right__table">
+                            <tbody>
+                                <tr class="weather-right__items">
+                                    <th colspan="2" class="weather-right__item">Chi tiết</th>
+                                </tr>
+                                <tr class="weather-right__items">
+                                    <td class="weather-right__item">Nhiệt độ</td>
+                                    <td class="weather-right__item weather-right__feels">~<span>°C</span></td>
+                                </tr>
+                                <tr class="weather-right__items">
+                                    <td class="weather-right__item">Tốc độ gió</td>
+                                    <td class="weather-right__item weather-right__wind-speed">~ m/s </td>
+                                </tr>
+                                <tr class="weather-right-card__items">
+                                    <td class="weather-right__item">Độ ẩm</td>
+                                    <td class="weather-right__item weather-right__humidity">~%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="body-section" style="flex:5 1 0">
+                <h2>Bản đồ</h2>
+                <p>Chọn một vị trí trên bản đồ để tính toán các khả năng xảy ra thiên tai thời tiết</p>
+                
                 <div class="container-map" style="width: 100%;margin: auto;">
                     <div id="map"></div>
 
-                </div>
-                <p>Chọn một vị trí trên bản đồ để tính toán các khả năng xảy ra thiên tai thời tiết</p>
-            </div>
-        </div>
-        <div id="slidebar" class="body-section">
-            <h2>Thời tiết</h2>
-            <div id="openweathermap-widget-15" style="display: none;"></div>
-            <script>
-                window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
-                window.myWidgetParam.push({ id: 15, cityid: '1562822', appid: 'cd1a5f6ad179bf296cb39abd5e662678', units: 'metric', containerid: 'openweathermap-widget-15', });
-                (function () {
-                    var script = document.createElement('script');
-                    script.async = true;
-                    script.charset = "utf-8";
-                    script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(script, s);
-                })();
-            </script>
-            <div id="container-weather">
-                <div class="weather-header">
-                    Vị trí của bạn
-                </div>
-                <div id="weather-body">
-                    <div class="weather-right__temperature">~<span>°C</span></div>
-                    <table class="weather-right__table">
-                        <tbody>
-                            <tr class="weather-right__items">
-                                <th colspan="2" class="weather-right__item">Chi tiết</th>
-                            </tr>
-                            <tr class="weather-right__items">
-                                <td class="weather-right__item">Nhiệt độ</td>
-                                <td class="weather-right__item weather-right__feels">~<span>°C</span></td>
-                            </tr>
-                            <tr class="weather-right__items">
-                                <td class="weather-right__item">Tốc độ gió</td>
-                                <td class="weather-right__item weather-right__wind-speed">~ m/s </td>
-                            </tr>
-                            <tr class="weather-right-card__items">
-                                <td class="weather-right__item">Độ ẩm</td>
-                                <td class="weather-right__item weather-right__humidity">~%</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
