@@ -4,13 +4,13 @@ var isHasData =[false,false,false,false];
 var map = L.map('map').fitWorld();
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="https://openweathermap.org/api">OpenWeatherMap</a>'
 }).addTo(map);
 var first_lat = 0, first_lng = 0;
 //bật định vị
 function onLocationFound(e) {
     var radius = e.accuracy;
-    L.marker(e.latlng).addTo(map)
+    var marker = L.marker(e.latlng).addTo(map)
         .bindPopup("Bạn đang ở đây").openPopup();
     L.circle(e.latlng, radius).addTo(map);
     first_lat = e.latlng.lat;
@@ -27,7 +27,8 @@ function onLocationError(e) {
 map.on('locationerror', onLocationError);
 //set widget wether
 function setWidget(lat, lng, nameState) {
-
+    if(nameState==null)nameState="vị trí của bạn"
+    
     var api_key = 'cd1a5f6ad179bf296cb39abd5e662678';
     if (document.getElementById("weather-body")) {
         var url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${api_key}`;
@@ -62,6 +63,10 @@ function setWidget(lat, lng, nameState) {
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="widget-right__footer widget-right__footer--brown" style="background: #7a78a8">
+                    <div class="widget-right__layout"><a href="//openweathermap.org/" target="_blank"><div class="widget-right__logo_black_small"></div></a>
+                    </div>
                 </div>
                     `;
                 document.getElementById("container-weather").innerHTML = weather_widget;
@@ -204,6 +209,10 @@ function waitData(nameState) {
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="widget-right__footer widget-right__footer--brown" style="background: #7a78a8">
+                    <div class="widget-right__layout"><a href="//openweathermap.org/" target="_blank"><div class="widget-right__logo_black_small"></div></a>
+                    </div>
                 </div>
                     `;
         document.getElementById("container-weather").innerHTML = weather_widget;

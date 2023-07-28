@@ -61,6 +61,10 @@ function setWidget(lat, lng, nameState) {
                         </tbody>
                     </table>
                 </div>
+                <div class="widget-right__footer widget-right__footer--brown" style="background: #7a78a8">
+                    <div class="widget-right__layout"><a href="//openweathermap.org/" target="_blank"><div class="widget-right__logo_black_small"></div></a>
+                    </div>
+                </div>
                     `;
                 document.getElementById("container-weather").innerHTML = weather_widget;
             })
